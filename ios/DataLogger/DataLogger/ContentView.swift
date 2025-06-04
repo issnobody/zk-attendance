@@ -1,50 +1,37 @@
 import SwiftUI
 import CoreMotion
 
+enum LogLabel: String, CaseIterable, Identifiable {
+    case DESK, HANDSTILL, HANDMOVE, POCKET
+    var id: String { rawValue }
+}
+
 struct ContentView: View {
-    @State private var label = "WITH"
+    @State private var label: LogLabel = .DESK
     @State private var rows: [String] = []
     private let motion = CMMotionManager()
 
     var body: some View {
         VStack(spacing: 24) {
             Picker("Label", selection: $label) {
-                Text("WITH").tag("WITH")
-                Text("LEFT").tag("LEFT")
+                ForEach(LogLabel.allCases) { lbl in
+                    Text(lbl.rawValue).tag(lbl)
+                }
             }
-            .pickerStyle(SegmentedPickerStyle())
-            
-            Button("Start Logging") {
-                start()
-            }
-            .padding(.horizontal)
-            
-            Button("Stop & Export") {
-                export()
-            }
-            .padding(.horizontal)
+            .pickerStyle(.segmented)
+
+            Button("Start Logging") { start() }
+            Button("Stop & Export") { export() }
         }
         .padding()
-        .onAppear {
-            print("🛠️ ContentView appeared")
-        }
+        .onAppear { print("Logger ready for \(label.rawValue) data") }
     }
 
     private func start() {
-        print("🔴 start() called, isDeviceMotionAvailable = \(motion.isDeviceMotionAvailable)")
+        print("🔴 start() \(label.rawValue)")
         rows.removeAll()
-
-        guard motion.isDeviceMotionAvailable else {
-            print("⚠️ DeviceMotion not available on this device")
-            return
-        }
-
-        motion.deviceMotionUpdateInterval = 0.02  // 50 Hz
-        motion.startDeviceMotionUpdates(to: .main) { data, error in
-            if let err = error {
-                print("❌ Motion update error:", err.localizedDescription)
-                return
-            }
+        motion.deviceMotionUpdateInterval = 0.02
+        motion.startDeviceMotionUpdates(to: .main) { data, _ in
             guard let d = data else { return }
             let ts = Date().timeIntervalSince1970
             let row = [
@@ -55,23 +42,24 @@ struct ContentView: View {
                 String(d.rotationRate.x),
                 String(d.rotationRate.y),
                 String(d.rotationRate.z),
-                label
+                label.rawValue
             ].joined(separator: ",")
             rows.append(row)
         }
     }
 
     private func export() {
-        print("🟢 export() called, row count = \(rows.count)")
+        print("🟢 export() \(rows.count) rows")
         motion.stopDeviceMotionUpdates()
         let csv = rows.joined(separator: "\n")
-        let filename = "log_\(label).csv"
-        let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(filename)
-        do {
-            try csv.write(to: url, atomically: true, encoding: .utf8)
-            print("CSV saved ➜ \(url.path) (\(rows.count) rows)")
-        } catch {
-            print("❌ Failed to save CSV:", error.localizedDescription)
-        }
+        let filename = "log_\(label.rawValue).csv"
+        let url = URL(fileURLWithPath: NSTemporaryDirectory())
+                    .appendingPathComponent(filename)
+        try? csv.write(to: url, atomically: true, encoding: .utf8)
+        print("CSV saved ➜ \(url.path)")
     }
 }
+
+
+
+

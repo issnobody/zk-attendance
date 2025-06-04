@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		17ABF0F32DC651FD00D91EA5 /* proximity_final.zkey in Resources */ = {isa = PBXBuildFile; fileRef = 17ABF0F22DC651FD00D91EA5 /* proximity_final.zkey */; };
+		17ABF0F52DC6521300D91EA5 /* proximity.wasm in Resources */ = {isa = PBXBuildFile; fileRef = 17ABF0F42DC6521300D91EA5 /* proximity.wasm */; };
+		17B0DB692DC77288009BC125 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 17B0DB682DC77288009BC125 /* AnyCodable */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		17A3A1E42DC54DCA00ED80B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +27,31 @@
 			remoteGlobalIDString = 17A3A1D52DC54DC800ED80B4;
 			remoteInfo = DataLogger;
 		};
+		17ABF0B72DC6220800D91EA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A3A1CE2DC54DC800ED80B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17ABF0A92DC6220600D91EA5;
+			remoteInfo = ProverApp;
+		};
+		17ABF0C12DC6220800D91EA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A3A1CE2DC54DC800ED80B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17ABF0A92DC6220600D91EA5;
+			remoteInfo = ProverApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17A3A1D62DC54DC800ED80B4 /* DataLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A3A1E32DC54DCA00ED80B4 /* DataLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A3A1ED2DC54DCA00ED80B4 /* DataLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17ABF0AA2DC6220600D91EA5 /* ProverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17ABF0B62DC6220800D91EA5 /* ProverAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProverAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17ABF0C02DC6220800D91EA5 /* ProverAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProverAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17ABF0F22DC651FD00D91EA5 /* proximity_final.zkey */ = {isa = PBXFileReference; lastKnownFileType = file; name = proximity_final.zkey; path = ../../circuit/proximity_final.zkey; sourceTree = "<group>"; };
+		17ABF0F42DC6521300D91EA5 /* proximity.wasm */ = {isa = PBXFileReference; lastKnownFileType = file; name = proximity.wasm; path = ../../circuit/proximity_js/proximity.wasm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +61,13 @@
 				Info.plist,
 			);
 			target = 17A3A1D52DC54DC800ED80B4 /* DataLogger */;
+		};
+		17ABF0EF2DC6513E00D91EA5 /* Exceptions for "ProverApp" folder in "ProverApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 17ABF0A92DC6220600D91EA5 /* ProverApp */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -56,6 +88,24 @@
 		17A3A1F02DC54DCA00ED80B4 /* DataLoggerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DataLoggerUITests;
+			sourceTree = "<group>";
+		};
+		17ABF0B92DC6220800D91EA5 /* ProverAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ProverAppTests;
+			sourceTree = "<group>";
+		};
+		17ABF0C32DC6220800D91EA5 /* ProverAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ProverAppUITests;
+			sourceTree = "<group>";
+		};
+		17ABF0E92DC6513E00D91EA5 /* ProverApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				17ABF0EF2DC6513E00D91EA5 /* Exceptions for "ProverApp" folder in "ProverApp" target */,
+			);
+			path = ProverApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,15 +132,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17ABF0A72DC6220600D91EA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B0DB692DC77288009BC125 /* AnyCodable in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0B32DC6220800D91EA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0BD2DC6220800D91EA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		17A3A1CD2DC54DC800ED80B4 = {
 			isa = PBXGroup;
 			children = (
+				17ABF0F42DC6521300D91EA5 /* proximity.wasm */,
+				17ABF0F22DC651FD00D91EA5 /* proximity_final.zkey */,
 				17A3A1D82DC54DC800ED80B4 /* DataLogger */,
 				17A3A1E62DC54DCA00ED80B4 /* DataLoggerTests */,
 				17A3A1F02DC54DCA00ED80B4 /* DataLoggerUITests */,
+				17ABF0E92DC6513E00D91EA5 /* ProverApp */,
+				17ABF0B92DC6220800D91EA5 /* ProverAppTests */,
+				17ABF0C32DC6220800D91EA5 /* ProverAppUITests */,
 				17A3A1D72DC54DC800ED80B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +178,9 @@
 				17A3A1D62DC54DC800ED80B4 /* DataLogger.app */,
 				17A3A1E32DC54DCA00ED80B4 /* DataLoggerTests.xctest */,
 				17A3A1ED2DC54DCA00ED80B4 /* DataLoggerUITests.xctest */,
+				17ABF0AA2DC6220600D91EA5 /* ProverApp.app */,
+				17ABF0B62DC6220800D91EA5 /* ProverAppTests.xctest */,
+				17ABF0C02DC6220800D91EA5 /* ProverAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +256,75 @@
 			productReference = 17A3A1ED2DC54DCA00ED80B4 /* DataLoggerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		17ABF0A92DC6220600D91EA5 /* ProverApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17ABF0C82DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverApp" */;
+			buildPhases = (
+				17ABF0A62DC6220600D91EA5 /* Sources */,
+				17ABF0A72DC6220600D91EA5 /* Frameworks */,
+				17ABF0A82DC6220600D91EA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				17ABF0E92DC6513E00D91EA5 /* ProverApp */,
+			);
+			name = ProverApp;
+			packageProductDependencies = (
+				17B0DB682DC77288009BC125 /* AnyCodable */,
+			);
+			productName = ProverApp;
+			productReference = 17ABF0AA2DC6220600D91EA5 /* ProverApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17ABF0B52DC6220800D91EA5 /* ProverAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17ABF0CB2DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverAppTests" */;
+			buildPhases = (
+				17ABF0B22DC6220800D91EA5 /* Sources */,
+				17ABF0B32DC6220800D91EA5 /* Frameworks */,
+				17ABF0B42DC6220800D91EA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17ABF0B82DC6220800D91EA5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17ABF0B92DC6220800D91EA5 /* ProverAppTests */,
+			);
+			name = ProverAppTests;
+			packageProductDependencies = (
+			);
+			productName = ProverAppTests;
+			productReference = 17ABF0B62DC6220800D91EA5 /* ProverAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17ABF0BF2DC6220800D91EA5 /* ProverAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17ABF0CE2DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverAppUITests" */;
+			buildPhases = (
+				17ABF0BC2DC6220800D91EA5 /* Sources */,
+				17ABF0BD2DC6220800D91EA5 /* Frameworks */,
+				17ABF0BE2DC6220800D91EA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17ABF0C22DC6220800D91EA5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17ABF0C32DC6220800D91EA5 /* ProverAppUITests */,
+			);
+			name = ProverAppUITests;
+			packageProductDependencies = (
+			);
+			productName = ProverAppUITests;
+			productReference = 17ABF0C02DC6220800D91EA5 /* ProverAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +346,17 @@
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = 17A3A1D52DC54DC800ED80B4;
 					};
+					17ABF0A92DC6220600D91EA5 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					17ABF0B52DC6220800D91EA5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 17ABF0A92DC6220600D91EA5;
+					};
+					17ABF0BF2DC6220800D91EA5 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 17ABF0A92DC6220600D91EA5;
+					};
 				};
 			};
 			buildConfigurationList = 17A3A1D12DC54DC800ED80B4 /* Build configuration list for PBXProject "DataLogger" */;
@@ -208,6 +368,10 @@
 			);
 			mainGroup = 17A3A1CD2DC54DC800ED80B4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				17B0DB662DC77211009BC125 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				17B0DB672DC77288009BC125 /* XCRemoteSwiftPackageReference "AnyCodable" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17A3A1D72DC54DC800ED80B4 /* Products */;
 			projectDirPath = "";
@@ -216,6 +380,9 @@
 				17A3A1D52DC54DC800ED80B4 /* DataLogger */,
 				17A3A1E22DC54DCA00ED80B4 /* DataLoggerTests */,
 				17A3A1EC2DC54DCA00ED80B4 /* DataLoggerUITests */,
+				17ABF0A92DC6220600D91EA5 /* ProverApp */,
+				17ABF0B52DC6220800D91EA5 /* ProverAppTests */,
+				17ABF0BF2DC6220800D91EA5 /* ProverAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +403,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		17A3A1EB2DC54DCA00ED80B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0A82DC6220600D91EA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17ABF0F32DC651FD00D91EA5 /* proximity_final.zkey in Resources */,
+				17ABF0F52DC6521300D91EA5 /* proximity.wasm in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0B42DC6220800D91EA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0BE2DC6220800D91EA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,6 +456,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17ABF0A62DC6220600D91EA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0B22DC6220800D91EA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17ABF0BC2DC6220800D91EA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +489,16 @@
 			isa = PBXTargetDependency;
 			target = 17A3A1D52DC54DC800ED80B4 /* DataLogger */;
 			targetProxy = 17A3A1EE2DC54DCA00ED80B4 /* PBXContainerItemProxy */;
+		};
+		17ABF0B82DC6220800D91EA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17ABF0A92DC6220600D91EA5 /* ProverApp */;
+			targetProxy = 17ABF0B72DC6220800D91EA5 /* PBXContainerItemProxy */;
+		};
+		17ABF0C22DC6220800D91EA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17ABF0A92DC6220600D91EA5 /* ProverApp */;
+			targetProxy = 17ABF0C12DC6220800D91EA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,6 +760,148 @@
 			};
 			name = Release;
 		};
+		17ABF0C92DC6220800D91EA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProverApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to detect the classroom beacon for attendance.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location is required to range iBeacons for attendance proof.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access location always to detect the beacon even if the app goes to background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs location access to detect the professor’s beacon while you’re in class.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "App needs motion data to detect if phone is with the user.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17ABF0CA2DC6220800D91EA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProverApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to detect the classroom beacon for attendance.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location is required to range iBeacons for attendance proof.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need to access location always to detect the beacon even if the app goes to background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs location access to detect the professor’s beacon while you’re in class.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "App needs motion data to detect if phone is with the user.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17ABF0CC2DC6220800D91EA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProverApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProverApp";
+			};
+			name = Debug;
+		};
+		17ABF0CD2DC6220800D91EA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProverApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProverApp";
+			};
+			name = Release;
+		};
+		17ABF0CF2DC6220800D91EA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ProverApp;
+			};
+			name = Debug;
+		};
+		17ABF0D02DC6220800D91EA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 62GX7RW8K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = College.ProverAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ProverApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -578,7 +941,61 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		17ABF0C82DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17ABF0C92DC6220800D91EA5 /* Debug */,
+				17ABF0CA2DC6220800D91EA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17ABF0CB2DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17ABF0CC2DC6220800D91EA5 /* Debug */,
+				17ABF0CD2DC6220800D91EA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17ABF0CE2DC6220800D91EA5 /* Build configuration list for PBXNativeTarget "ProverAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17ABF0CF2DC6220800D91EA5 /* Debug */,
+				17ABF0D02DC6220800D91EA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17B0DB662DC77211009BC125 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		17B0DB672DC77288009BC125 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17B0DB682DC77288009BC125 /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17B0DB672DC77288009BC125 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17A3A1CE2DC54DC800ED80B4 /* Project object */;
 }
