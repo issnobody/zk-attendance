@@ -20,6 +20,6 @@ struct MainTabView: View {
                     Label("Users", systemImage: "person.3.fill")
                 }
         }
-        .accentColor(.blue)
+        .tint(.blue)
     }
 }
