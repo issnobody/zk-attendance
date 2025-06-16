@@ -12,17 +12,22 @@ struct UserHistoryView: View {
   @EnvironmentObject var session: AdminSessionStore
   let user: AdminUser
 
+  static let dateTimeFormatter: DateFormatter = {
+    let f = DateFormatter()
+    f.locale = Locale(identifier: "en_US_POSIX")
+    f.dateStyle = .medium
+    f.timeStyle = .short
+    return f
+  }()
+
   var body: some View {
     List {
       if session.selectedHistory.isEmpty {
-        Text("Loading…")
+        Text("Fetching records…")
       }
       ForEach(session.selectedHistory) { rec in
         HStack {
-          // show both date and time
-          Text(rec.date, style: .date)
-          Text(rec.date, style: .time)
-            .foregroundColor(.secondary)
+          Text(rec.date, formatter: Self.dateTimeFormatter)
           Spacer()
           Text(rec.status)
             .foregroundColor(rec.status.hasPrefix("✅") ? .green : .red)

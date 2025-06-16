@@ -10,5 +10,6 @@ struct HomeView: View {
       HistoryView()
         .tabItem { Label("History",    systemImage: "clock.fill") }
     }
+    .tint(.blue)
   }
 }

@@ -7,22 +7,28 @@ struct LoginView: View {
     @State private var showSignup = false
 
     var body: some View {
-        VStack(spacing:20) {
-            Text("ZK Attendance").font(.largeTitle)
+        VStack(spacing: 24) {
+            Text("ZK Attendance")
+                .font(.largeTitle.bold())
             TextField("Username", text: $username)
                 .textFieldStyle(.roundedBorder)
                 .autocapitalization(.none)
+                .autocorrectionDisabled(true)
             SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
 
-            Button("Log In") {
+            Button(action: {
                 session.login(username: username, password: password) { ok in
                     if !ok {
                         // show error alert
                         showSignup = false
                     }
                 }
+            }) {
+                Text("Log In")
+                    .frame(maxWidth: .infinity)
             }
+            .buttonStyle(.borderedProminent)
             .disabled(username.isEmpty || password.isEmpty)
             .alert(item: Binding(
               get: { session.errorMessage.map { ErrorWrapper($0) } },
