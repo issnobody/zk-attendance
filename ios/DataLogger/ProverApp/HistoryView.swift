@@ -16,7 +16,6 @@ struct HistoryView: View {
         NavigationView {
             List(session.history) { rec in
                 HStack {
-                    // 2️⃣ Use our new formatter:
                     Text(rec.date, formatter: Self.dateTimeFormatter)
                     Spacer()
                     Text(rec.status)
@@ -27,6 +26,7 @@ struct HistoryView: View {
                         )
                 }
             }
+            .refreshable { session.fetchHistory() }
             .onAppear { session.fetchHistory() }
             .navigationTitle("Attendance History")
             .toolbar {

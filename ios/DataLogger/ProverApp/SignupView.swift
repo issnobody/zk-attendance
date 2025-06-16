@@ -16,17 +16,19 @@ struct SignupView: View {
     @State private var showingAlert = false
 
     var body: some View {
-        VStack(spacing:20) {
-            Text("Sign Up").font(.largeTitle)
+        VStack(spacing: 24) {
+            Text("Create Account")
+                .font(.largeTitle.bold())
             TextField("Username", text: $username)
                 .textFieldStyle(.roundedBorder)
                 .autocapitalization(.none)
+                .autocorrectionDisabled(true)
             SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
             SecureField("Confirm", text: $confirm)
                 .textFieldStyle(.roundedBorder)
 
-            Button("Create Account") {
+            Button(action: {
                 guard password == confirm, !username.isEmpty else {
                     session.errorMessage = "Passwords must match"
                     showingAlert = true
@@ -41,7 +43,11 @@ struct SignupView: View {
                         showingAlert = true
                     }
                 }
+            }) {
+                Text("Sign Up")
+                    .frame(maxWidth: .infinity)
             }
+            .buttonStyle(.borderedProminent)
             .disabled(username.isEmpty || password.isEmpty)
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Signup"),

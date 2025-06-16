@@ -66,11 +66,15 @@ struct AttendanceView: View {
                   .padding(.top)
             }
 
-            Button("Start Capture & Scan") {
+            Button(action: {
                 startContinuousCapture()
                 lastBeaconTime = Date()
                 startSampling()
+            }) {
+                Text("Start Attendance Session")
+                    .frame(maxWidth: .infinity)
             }
+            .buttonStyle(.borderedProminent)
             .padding(.top)
 
             Text(proofResult)

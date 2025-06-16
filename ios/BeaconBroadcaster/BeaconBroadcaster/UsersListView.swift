@@ -33,9 +33,10 @@ struct UsersListView: View {
                             Text(user.username)
                         }
                     }
+                    .refreshable { fetchUsers() }
                 }
             }
-            .navigationTitle("All Users")
+            .navigationTitle("User Accounts")
             .toolbar {
                 // pull-to-refresh button
                 ToolbarItem(placement: .navigationBarTrailing) {
