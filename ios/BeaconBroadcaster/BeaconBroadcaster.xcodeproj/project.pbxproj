@@ -520,15 +520,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = College.BeaconBroadcasterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BeaconBroadcaster;
-			};
-			name = Debug;
-		};
-		17B0DB3D2DC757E0009BC125 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+                               SWIFT_VERSION = 5.0;
+                               TARGETED_DEVICE_FAMILY = "1,2";
+                               TEST_TARGET_NAME = BeaconBroadcaster;
+                               CLANG_ENABLE_MODULES = YES;
+                               IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+                               SDKROOT = iphoneos;
+                       };
+                       name = Debug;
+               };
+               17B0DB3D2DC757E0009BC125 /* Release */ = {
+                       isa = XCBuildConfiguration;
+                       buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62GX7RW8K5;
@@ -537,12 +540,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = College.BeaconBroadcasterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BeaconBroadcaster;
-			};
-			name = Release;
-		};
+                               SWIFT_VERSION = 5.0;
+                               TARGETED_DEVICE_FAMILY = "1,2";
+                               TEST_TARGET_NAME = BeaconBroadcaster;
+                               CLANG_ENABLE_MODULES = YES;
+                               IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+                               SDKROOT = iphoneos;
+                       };
+                       name = Release;
+               };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
