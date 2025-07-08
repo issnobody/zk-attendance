@@ -1,44 +1,41 @@
 import SwiftUI
-import CoreLocation
 
-@main
-struct AttendanceApp: App {
-    @StateObject private var rootSession = RootSession()
-    @StateObject private var broadcaster = BeaconBroadcaster()
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-    var body: some Scene {
-        WindowGroup {
-            switch rootSession.role {
-            case .student:
-                HomeView()
-                    .environmentObject(rootSession.student)
-            case .admin:
-                MainTabView()
-                    .environmentObject(rootSession.admin)
-                    .environmentObject(broadcaster)
-            case .none:
-                AppLoginView()
-                    .environmentObject(rootSession)
-            }
-        }
-    }
+private struct ErrorWrapper: Identifiable {
+    let id = UUID()
+    let msg: String
 }
 
-// copied from BeaconBroadcasterApp so location permissions work
-class AppDelegate: NSObject, UIApplicationDelegate, CLLocationManagerDelegate {
-    private let locMgr = CLLocationManager()
+struct AppLoginView: View {
+    @EnvironmentObject var session: RootSession
+    @State private var username = ""
+    @State private var password = ""
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        locMgr.delegate = self
-        locMgr.requestWhenInUseAuthorization()
-        return true
-    }
+    var body: some View {
+        VStack(spacing: 24) {
+            Text("ZK Attendance")
+                .font(.largeTitle.bold())
+            TextField("Username", text: $username)
+                .textFieldStyle(.roundedBorder)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+            SecureField("Password", text: $password)
+                .textFieldStyle(.roundedBorder)
 
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            manager.requestAlwaysAuthorization()
+            Button(action: {
+                session.login(username: username, password: password)
+            }) {
+                Text("Log In")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(username.isEmpty || password.isEmpty)
+        }
+        .padding()
+        .alert(item: Binding<ErrorWrapper?>(
+            get: { session.errorMessage.map { ErrorWrapper(msg: $0) } },
+            set: { _ in session.errorMessage = nil }
+        )) { err in
+            Alert(title: Text("Login Error"), message: Text(err.msg), dismissButton: .default(Text("OK")))
         }
     }
 }
