@@ -7,19 +7,31 @@ final class BeaconBroadcaster: NSObject,
                               CBPeripheralManagerDelegate,
                               ObservableObject
 {
-    private var pm: CBPeripheralManager!
+    private var pm: CBPeripheralManager?
+    private var timer: Timer?
     /// Base UUID with a fixed first 8 bytes; last 8 bytes will hold our nonce.
     private let baseUuidString = "D4F56A24-9CDE-4B12-ABCD-000000000000"
 
     override init() {
         super.init()
+    }
+
+    /// Begin broadcasting beacons
+    func start() {
         pm = CBPeripheralManager(delegate: self, queue: nil)
+    }
+
+    /// Stop broadcasting
+    func stop() {
+        timer?.invalidate(); timer = nil
+        pm?.stopAdvertising();
+        pm = nil
     }
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         guard peripheral.state == .poweredOn else { return }
         advertise()
-        Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { _ in
             self.advertise()
         }
     }

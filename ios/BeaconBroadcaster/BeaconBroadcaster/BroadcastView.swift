@@ -8,6 +8,7 @@ struct BroadcastView: View {
     Text("🔊 Beacon Broadcaster Running…")
       .multilineTextAlignment(.center)
       .padding()
-      .onAppear { /* nothing to do here—the manager lives in App */ }
+      .onAppear { broadcaster.start() }
+      .onDisappear { broadcaster.stop() }
   }
 }
