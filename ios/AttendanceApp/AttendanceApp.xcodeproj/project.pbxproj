@@ -20,7 +20,6 @@
 		1708582D2E1CEBB80039521A /* UserHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858162E1CEBB80039521A /* UserHistoryView.swift */; };
 		1708582E2E1CEBB80039521A /* BeaconBroadcasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858112E1CEBB80039521A /* BeaconBroadcasterApp.swift */; };
 		1708582F2E1CEBB80039521A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858142E1CEBB80039521A /* MainTabView.swift */; };
-		170858302E1CEBB80039521A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858152E1CEBB80039521A /* Models.swift */; };
 		1708585F2E1CEBCB0039521A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1708583A2E1CEBCB0039521A /* Assets.xcassets */; };
 		170858612E1CEBCB0039521A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170858452E1CEBCB0039521A /* Assets.xcassets */; };
 		170858622E1CEBCB0039521A /* snarkjs.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 170858542E1CEBCB0039521A /* snarkjs.min.js */; };
@@ -36,7 +35,6 @@
 		1708586D2E1CEBCB0039521A /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858522E1CEBCB0039521A /* SessionStore.swift */; };
 		1708586E2E1CEBCB0039521A /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858472E1CEBCB0039521A /* AttendanceView.swift */; };
 		1708586F2E1CEBCB0039521A /* ProverAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858562E1CEBCB0039521A /* ProverAppTests.swift */; };
-		170858702E1CEBCB0039521A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708583B2E1CEBCB0039521A /* ContentView.swift */; };
 		170858712E1CEBCB0039521A /* ProverAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858582E1CEBCB0039521A /* ProverAppUITests.swift */; };
 		170858722E1CEBCB0039521A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170858492E1CEBCB0039521A /* ContentView.swift */; };
 		170858732E1CEBCB0039521A /* PresenceRF.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1708584F2E1CEBCB0039521A /* PresenceRF.mlmodel */; };
