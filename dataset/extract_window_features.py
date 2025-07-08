@@ -40,5 +40,5 @@ for path in glob.glob(os.path.join(RAW_DIR,"*.csv")):
 
 out = pd.DataFrame(rows, columns=header)
 out.to_csv(OUT_CSV, index=False)
-print(f"✅ Wrote {len(rows)} windows to {OUT_CSV}")
+print(f" Wrote {len(rows)} windows to {OUT_CSV}")
 

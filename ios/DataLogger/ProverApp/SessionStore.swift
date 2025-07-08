@@ -13,7 +13,7 @@ final class SessionStore: ObservableObject {
       }
     
 
-  private let baseURL = URL(string: "http://192.168.100.88:5100")!
+  private let baseURL = URL(string: "http://192.168.100.226:5100")!
 
   // MARK: Sign up
   func signup(username: String, password: String, completion: @escaping(Bool)->Void) {
@@ -66,8 +66,7 @@ final class SessionStore: ObservableObject {
     }.resume()
   }
     
-    // ─── RECORD ATTENDANCE ────────────────────────────
-       /// Call this when you have your final attendance decision
+ 
        func recordAttendance(status: String) {
            guard let token = token else { return }
            let url = baseURL.appendingPathComponent("/attendance")
@@ -89,8 +88,7 @@ final class SessionStore: ObservableObject {
            }.resume()
        }
 
-       // ─── FETCH HISTORY ────────────────────────────────
-    // SessionStore.swift (or wherever you do your fetch)
+
 
     func fetchHistory() {
       guard let token = self.token else { return }

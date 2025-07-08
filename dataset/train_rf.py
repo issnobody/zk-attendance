@@ -66,7 +66,7 @@ print(classification_report(
 
 # 7. Persist the sklearn model
 joblib.dump(best, model_pkl)
-print(f"\n✅ Saved RandomForest to {model_pkl}")
+print(f"\nSaved RandomForest to {model_pkl}")
 
 # 8. Convert to Core ML
 print("Converting to Core ML…")
@@ -80,5 +80,5 @@ coreml_model.short_description = (
     "RF model: LEFT=0 (desk), WITH=1 (in hand/pocket)"
 )
 coreml_model.save(coreml_path)
-print(f"✅ Core ML model saved to {coreml_path}")
+print(f" Core ML model saved to {coreml_path}")
 

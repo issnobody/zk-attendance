@@ -150,7 +150,7 @@ struct AttendanceView: View {
         let accelVarMean = accelVars.reduce(0,+)/3
         let gyroVarMean  = gyroVars.reduce(0,+)/3
         let ratio = gyroVarMean / max(accelVarMean, 1e-12)
-        print("📊 ratio=\(ratio)")
+        print(" ratio=\(ratio)")
         if ratio < ratioThreshold {
             pushResult(false)
             return
@@ -197,11 +197,11 @@ struct AttendanceView: View {
         instantStates.append(resultText == "WITH USER")
     }
 
-    // MARK: Proof generation
+    //  Proof generation
 
     func generateAndSendProof(nonce: Data) { /* unchanged */ }
 
-    // MARK: 3-minute sampling
+    //  3-minute sampling
 
     private func sampleOnce() {
         // majority vote over last window
@@ -234,10 +234,10 @@ struct AttendanceView: View {
             let presentCount = samples.filter{ $0 }.count
             let absentCount  = samples.count - presentCount
             let result = presentCount > absentCount
-                       ? "✅ Attendance confirmed!"
-                       : "❌ Attendance absent"
+                       ? " Attendance confirmed!"
+                       : " Attendance absent"
             finalText = result
-            print("📊 Final: present \(presentCount) vs absent \(absentCount) →", result)
+            print(" Final: present \(presentCount) vs absent \(absentCount) →", result)
             session.recordAttendance(status: result)
         }
     }

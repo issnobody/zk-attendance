@@ -54,7 +54,7 @@ final class AdminSessionStore: ObservableObject {
     /// Your API’s base URL
     let baseURL: URL
 
-    init(baseURL: URL = URL(string: "http://192.168.100.88:5100")!) {
+    init(baseURL: URL = URL(string: "http://192.168.100.226:5100")!) {
         self.baseURL = baseURL
     }
 

@@ -5,8 +5,8 @@ import Combine
 import AnyCodable
 
 
-let proveURL  = URL(string: "http://192.168.100.88:5100/prove")!
-let verifyURL = URL(string: "http://192.168.100.88:5100/verify")!
+let proveURL  = URL(string: "http://192.168.100.226:5100/prove")!
+let verifyURL = URL(string: "http://192.168.100.226:5100/verify")!
 
 
 struct ContentView: View {
@@ -328,7 +328,7 @@ struct ContentView: View {
 
     // Helper to send the proof to /verify
     func verifyOnServer(proof: [String:Any], publicSignals: [Any]) {
-        var req2 = URLRequest(url: URL(string: "http://192.168.1.199:5100/verify")!)
+        var req2 = URLRequest(url: URL(string: "http://192.168.100.226:5100/verify")!)
         req2.httpMethod = "POST"
         req2.setValue("application/json", forHTTPHeaderField: "Content-Type")
         req2.httpBody = try? JSONSerialization.data(withJSONObject: [
