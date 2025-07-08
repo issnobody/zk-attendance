@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>College.AttendanceApp</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Bluetooth access is required to communicate with classroom beacons.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Location access is needed to detect nearby beacons for attendance.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Always-on location access allows beacon detection in the background.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Location access is required to detect beacons even when the app is not active.</string>
+</dict>
+</plist>
