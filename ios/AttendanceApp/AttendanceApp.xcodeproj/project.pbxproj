@@ -502,13 +502,12 @@
 				170858692E1CEBCB0039521A /* BLEScanner.swift in Sources */,
 				1708586A2E1CEBCB0039521A /* DataLoggerUITests.swift in Sources */,
 				1708586B2E1CEBCB0039521A /* SignupView.swift in Sources */,
-				1708586C2E1CEBCB0039521A /* Models.swift in Sources */,
-				1708586D2E1CEBCB0039521A /* SessionStore.swift in Sources */,
-				1708586E2E1CEBCB0039521A /* AttendanceView.swift in Sources */,
-				1708586F2E1CEBCB0039521A /* ProverAppTests.swift in Sources */,
-				170858702E1CEBCB0039521A /* ContentView.swift in Sources */,
-				170858712E1CEBCB0039521A /* ProverAppUITests.swift in Sources */,
-				170858722E1CEBCB0039521A /* ContentView.swift in Sources */,
+                               1708586C2E1CEBCB0039521A /* Models.swift in Sources */,
+                               1708586D2E1CEBCB0039521A /* SessionStore.swift in Sources */,
+                               1708586E2E1CEBCB0039521A /* AttendanceView.swift in Sources */,
+                               1708586F2E1CEBCB0039521A /* ProverAppTests.swift in Sources */,
+                               170858712E1CEBCB0039521A /* ProverAppUITests.swift in Sources */,
+                               170858722E1CEBCB0039521A /* ContentView.swift in Sources */,
 				170858732E1CEBCB0039521A /* PresenceRF.mlmodel in Sources */,
 				170858742E1CEBCB0039521A /* LoginView.swift in Sources */,
 				170858752E1CEBCB0039521A /* ProverAppUITestsLaunchTests.swift in Sources */,
@@ -518,7 +517,6 @@
 				1708582D2E1CEBB80039521A /* UserHistoryView.swift in Sources */,
 				1708582E2E1CEBB80039521A /* BeaconBroadcasterApp.swift in Sources */,
 				1708582F2E1CEBB80039521A /* MainTabView.swift in Sources */,
-				170858302E1CEBB80039521A /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
